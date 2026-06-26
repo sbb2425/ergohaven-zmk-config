@@ -44,6 +44,13 @@
             #binding-cells = <0>;
             bindings = <&bt BT_NXT>, <&bt BT_CLR_ALL>;
         };
+
+        scroll_low: scroll_low {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SCROLL_LOW";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 2>;
+        };
     };
 
     keymap {
@@ -51,8 +58,8 @@
 
         base {
             bindings = <
-&mkp MB1  &mkp MB2
-&mo 2     &mo 1
+&mkp MB1  &mo 2
+&mo 1     &mkp MB2
 &adj1     &adj2
             >;
 
@@ -61,9 +68,9 @@
 
         scroll {
             bindings = <
-&trans  &trans
-&trans  &trans
-&trans  &trans
+&mkp MB4  &trans
+&trans    &mkp MB5
+&trans    &trans
             >;
 
             display-name = "Scroll";
@@ -93,7 +100,10 @@
 &trackball { cpi = <1000>; };
 
 &trackball_listener {
-    input-processors = <&zip_y_scaler 1 2>, <&zip_x_scaler 1 1>, <&sensor_rotation>;
+    input-processors =
+        <&zip_y_scaler 1 2>,
+        <&zip_x_scaler 1 1>,
+        <&sensor_rotation>;
 
     scroller {
         layers = <1>;
