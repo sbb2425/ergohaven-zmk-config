@@ -35,14 +35,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ADJ1";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&bt BT_CLR>;
+            bindings = <&bt BT_SEL 0>, <&bt BT_PRV>;
         };
 
         adj2: adj2 {
             compatible = "zmk,behavior-tap-dance";
             label = "ADJ2";
             #binding-cells = <0>;
-            bindings = <&bt BT_NXT>, <&bt BT_CLR_ALL>;
+            bindings = <&bt BT_NXT>, <&bt BT_PRV>;
         };
 
         scroll_low: scroll_low {
@@ -78,9 +78,9 @@
 
         sniper {
             bindings = <
-&trans  &trans
-&trans  &trans
-&trans  &trans
+&trans          &trans
+&trans          &trans
+&bt BT_CLR_ALL  &bt BT_CLR
             >;
 
             display-name = "Sniper";
