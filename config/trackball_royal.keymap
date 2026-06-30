@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ADJ2";
             #binding-cells = <0>;
-            bindings = <&bt BT_NXT>, <&bt BT_PRV>;
+            bindings = <&bt BT_SEL 1>, <&bt BT_PRV>;
         };
 
         bt_clear: bt_clear {
