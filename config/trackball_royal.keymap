@@ -58,9 +58,9 @@
 
         base {
             bindings = <
-&mkp MB1  &mo 2
-&mo 1     &mkp MB2
-&adj1     &adj2
+&mkp MB1      &mo 2
+&mo 1         &mkp MB2
+&bt BT_SEL 1  &bt BT_SEL 0
             >;
 
             display-name = "Base";
@@ -68,9 +68,9 @@
 
         scroll {
             bindings = <
-&trans  &mkp MB5
-&trans  &mkp MB4
-&trans  &trans
+&trans      &mkp MB5
+&trans      &mkp MB4
+&bt BT_NXT  &bt BT_PRV
             >;
 
             display-name = "Scroll";
@@ -80,7 +80,7 @@
             bindings = <
 &trans     &trans
 &trans     &trans
-&bt_clear  &bt_clear
+&bt_clear  &none
             >;
 
             display-name = "Sniper";
